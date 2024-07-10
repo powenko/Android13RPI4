@@ -8,9 +8,6 @@ build and make Android 13 image and sd card for Raspberry pi 4
 
 This is an AOSP (Android 14) built for Raspberry Pi 4 Model B, Pi 400, and Compute Module 4. Running this version requires a Pi 4 model with at least 2GB of RAM.
 
-**Important!** The Raspberry Pi hardware-specific implementation in this version is based on the original code released in my Raspberry Vanilla project, but this version still provides various additional features and enhancements. This image contains parts licensed under a non-commercial license (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International). You are free to use this version for personal/educational/etc. purposes. This version is not allowed for commercial use! You can contact me via email to discuss creating a customized Android version for commercial purposes.
-
-
 
 # Raspberry Android Kernel Compilation by source code. 
 ### Ubuntu 20.04 LTS
@@ -86,9 +83,15 @@ $ cd kernel/
 $ repo init -u https://android.googlesource.com/kernel/manifest -b common-android13-5.15-lts
 $ curl --create-dirs -L -o .repo/local_manifests/manifest_brcm_rpi4.xml -O -L https://raw.githubusercontent.com/raspberry-vanilla/android_kernel_manifest/android-13.0/manifest_brcm_rpi4.xml
 
+ 
 
-#### INSTALL SOURCE KERNEL
-$ repo sync
+#### BUILD IMAGE KERNEL
+$ BUILD_CONFIG=common/build.config.rpi4 build/build.sh
+
+
+
+
+
 
 ##  Error & Solution
 ### Error 1: \`/usr/bin/env: ‘python’: No such file or directory\`
