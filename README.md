@@ -90,6 +90,24 @@ $ BUILD_CONFIG=common/build.config.rpi4 build/build.sh
 
 
 
+####Install app IMAGER for flash image rpi4
+$ cd ..
+$ snap install rpi-imager
+
+####Change file ownership
+$ sudo chown user:root source/out/target/product/rpi4/RaspberryVanillaAOSP13..…
+
+1. please change RaspberryVanillaAOSP13..… to really file name
+2. user:root change to your account name, for example powenko , it will change to powenko:root
+
+
+
+####FLASH raspberry pi  micro sd card
+1.click "choose os"
+2.click "use custom"
+3.choose imager in folder aosp/source/out/target/product/rpi4/RaspberryVanillaAOSP13-20230706-rpi4.img
+4.choose ramidisk storage 
+5.write flash image
 
 
 
