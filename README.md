@@ -1,9 +1,8 @@
-# Android13RPI4
+# Android13 RPI 4
 build and make Android 13 image and sd card for Raspberry pi 4
 
 
-
-## Completed Files from Others
+## Completed Android image 
 - [KonstaKANG AOSP14](https://konstakang.com/devices/rpi4/AOSP14/)
 - `D:\powenko-win\20240707-RPI_Android\01_OtherVersions\AOSP14-20240704-KonstaKANG-rpi4`
 
@@ -13,13 +12,8 @@ This is an AOSP (Android 14) built for Raspberry Pi 4 Model B, Pi 400, and Compu
 
 
 
-
-# Raspberry Android Kernel Compilation 
-
-## Using Raspberry Pi for Burning
-
-
-## Using Ubuntu 20.04 LTS
+# Raspberry Android Kernel Compilation by source code. 
+### Ubuntu 20.04 LTS
 - [Ubuntu Focal Releases](https://releases.ubuntu.com/focal/)
 - Download 64-bit PC (AMD64) desktop image
 - harddisk space needs 500 GB
