@@ -18,17 +18,26 @@ This is an AOSP (Android 14) built for Raspberry Pi 4 Model B, Pi 400, and Compu
 youtube tutoirial (https://youtu.be/ORjOy6SqeC4)
 ### Install Required Packages
 $ sudo apt-get update
+
 $ sudo apt-get install openjdk-8-jdk android-tools-adb bc bison build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev git-core python3.8 libncurses5 -y
+
 $ sudo apt install python-is-python3
+
 $ sudo apt install python3-pip
+
 $ sudo pip3 install meson mako jinja2 ply pyyaml dataclasses
+
 $ sudo apt install meson
 
 ### Download and Set Path for Git Repo
 $ sudo apt-get update
+
 $ mkdir ~/bin
+
 $ PATH=~/bin:$PATH
+
 $ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+
 $ chmod a+x ~/bin/repo
 
 
@@ -41,10 +50,15 @@ $ chmod a+x ~/bin/repo
 
 ### Initialize AOSP-git Repo
 $ cd ~/Desktop
+
 $ mkdir aosp14/source
+
 $ cd aosp14/source
+
 $ sudo ln -s /usr/bin/python3 /usr/bin/python
+
 $ git config --global user.email "you@example.com"
+
 $ git config --global user.name "Your Name" 
 
 
@@ -65,7 +79,9 @@ $ repo sync
 ### COMPILE
 
 $ . build/envsetup.sh
+
 $ lunch aosp_rpi4-userdebug
+
 $ make bootimage systemimage vendorimage -j\$(nproc)
 
 tutorial video(https://youtu.be/JRchgMafhZ4)
@@ -75,12 +91,15 @@ tutorial video(https://youtu.be/JRchgMafhZ4)
 ### MAKE KERNEL
 #### CREATE FOLDER KERNEL
 $ cd ..
+
 $ mkdir -p kernel/
+
 $ cd kernel/
 
 #### INITIALIZATION REPO KERNEL
 
 $ repo init -u https://android.googlesource.com/kernel/manifest -b common-android13-5.15-lts
+
 $ curl --create-dirs -L -o .repo/local_manifests/manifest_brcm_rpi4.xml -O -L https://raw.githubusercontent.com/raspberry-vanilla/android_kernel_manifest/android-13.0/manifest_brcm_rpi4.xml
 
 INSTALL SOURCE KERNEL
@@ -94,6 +113,7 @@ $ BUILD_CONFIG=common/build.config.rpi4 build/build.sh
 
 ####Install app IMAGER for flash image rpi4
 $ cd ..
+
 $ snap install rpi-imager
 
 ####Change file ownership
