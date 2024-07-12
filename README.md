@@ -15,7 +15,7 @@ This is an AOSP (Android 14) built for Raspberry Pi 4 Model B, Pi 400, and Compu
 - Download 64-bit PC (AMD64) desktop image
 - harddisk space needs 500 GB
 
-
+youtube tutoirial (https://youtu.be/ORjOy6SqeC4)
 ### Install Required Packages
 $ sudo apt-get update
 $ sudo apt-get install openjdk-8-jdk android-tools-adb bc bison build-essential curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc yasm zip zlib1g-dev git-core python3.8 libncurses5 -y
@@ -68,9 +68,9 @@ $ . build/envsetup.sh
 $ lunch aosp_rpi4-userdebug
 $ make bootimage systemimage vendorimage -j\$(nproc)
 
-
+tutorial video(https://youtu.be/JRchgMafhZ4)
 ### MAKE FLASH IMAGES
-./rpi4-mkimg.s
+./rpi4-mkimg.sh
 
 ### MAKE KERNEL
 #### CREATE FOLDER KERNEL
@@ -83,8 +83,10 @@ $ cd kernel/
 $ repo init -u https://android.googlesource.com/kernel/manifest -b common-android13-5.15-lts
 $ curl --create-dirs -L -o .repo/local_manifests/manifest_brcm_rpi4.xml -O -L https://raw.githubusercontent.com/raspberry-vanilla/android_kernel_manifest/android-13.0/manifest_brcm_rpi4.xml
 
- 
+INSTALL SOURCE KERNEL
+$ repo sync
 
+youtube tutiral (https://youtu.be/JQDu78zBm9A)
 #### BUILD IMAGE KERNEL
 $ BUILD_CONFIG=common/build.config.rpi4 build/build.sh
 
