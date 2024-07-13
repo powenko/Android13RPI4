@@ -3,10 +3,9 @@ build and make Android 13 image and sd card for Raspberry pi 4
 
 
 ## Completed Android image 
-- [KonstaKANG AOSP14](https://konstakang.com/devices/rpi4/AOSP14/)
-- `D:\powenko-win\20240707-RPI_Android\01_OtherVersions\AOSP14-20240704-KonstaKANG-rpi4`
-
-This is an AOSP (Android 14) built for Raspberry Pi 4 Model B, Pi 400, and Compute Module 4. Running this version requires a Pi 4 model with at least 2GB of RAM.
+- [AOSP13 Tableet for Raspberry Pi 4]([https://konstakang.com/devices/rpi4/AOSP14/](https://drive.google.com/drive/folders/1DGVvx6CjEIN8CoiIwBtS4vgT126h_dfq?usp=sharing))
+- https://drive.google.com/drive/folders/1DGVvx6CjEIN8CoiIwBtS4vgT126h_dfq?usp=sharing
+This is an AOSP (Android 13) built for Raspberry Pi 4 Model B, Pi 400, and Compute Module 4. Running this version requires a Pi 4 model with at least 2GB of RAM. sd card needs 8GB.
 
 
 # Raspberry Android Kernel Compilation by source code. 
